@@ -19,10 +19,10 @@
         <router-link class="nav-link" to="/"
           ><span class="link-slash">/</span> news</router-link
         >
-        <router-link class="nav-link" to="/"
+        <router-link class="nav-link" to="/careers"
           ><span class="link-slash">/</span> careers</router-link
         >
-        <router-link class="nav-link" to="/"
+        <router-link class="nav-link" to="/about"
           ><span class="link-slash">/</span> about us</router-link
         >
         <div class="mobile-menu">
@@ -48,10 +48,14 @@
               <router-link class="nav-link-mobile" to="/">news</router-link>
             </li>
             <li>
-              <router-link class="nav-link-mobile" to="/">careers</router-link>
+              <router-link class="nav-link-mobile" to="/careers"
+                >careers</router-link
+              >
             </li>
             <li>
-              <router-link class="nav-link-mobile" to="/">about us</router-link>
+              <router-link class="nav-link-mobile" to="/about"
+                >about us</router-link
+              >
             </li>
           </ul>
         </div>

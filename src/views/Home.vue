@@ -152,10 +152,12 @@ export default {
     z-index: 50;
     width: 100%;
     padding: 14px 0;
+    margin: 0;
     @media (max-width: 820px) {
       position: static;
       transform: unset;
       order: 1;
+      padding: 14px 0px 0px 0px;
     }
     .note-content {
       background: #000;
@@ -181,9 +183,9 @@ export default {
       }
       &:after {
         position: absolute;
-        left: auto;
         right: 0;
-        top: 100%;
+        bottom: 0;
+        transform: translateY(100%);
         border-style: solid;
         border-color: transparent transparent transparent #de4242;
         border-width: 0 0 15px 15px;
@@ -212,65 +214,6 @@ export default {
         }
       }
     }
-    // .note-content {
-    //   max-width: 73.125rem;
-    //   margin: auto;
-    //   padding: 14px 0;
-    //   position: relative;
-    //   background-color: #010101;
-    //   color: #fff;
-    //   &:before {
-    //     position: absolute;
-    //     left: 0;
-    //     top: 100%;
-    //     border-style: solid;
-    //     border-color: transparent #de4242 transparent transparent;
-    //     border-width: 0 15px 15px 0;
-    //     content: "";
-    //   }
-    //   &:after {
-    //     position: absolute;
-    //     left: auto;
-    //     right: 0;
-    //     top: 100%;
-    //     border-style: solid;
-    //     border-color: transparent transparent transparent #de4242;
-    //     border-width: 0 0 15px 15px;
-    //     content: "";
-    //   }
-    //   .label-underline:after {
-    //     width: 48px;
-    //     height: 4px;
-    //     position: absolute;
-    //     left: 80px;
-    //     right: auto;
-    //     top: auto;
-    //     bottom: 25px;
-    //     background-color: #de4242;
-    //     content: "";
-    //   }
-    //   .note-label {
-    //     position: relative;
-    //     display: inline-block;
-    //     width: 16.6666666667%;
-    //     padding: 0 20px;
-    //     font-family: "Oswald", Arial, sans-serif;
-    //     line-height: 1.5;
-    //     margin-bottom: 1.5rem;
-    //     font-size: 25px;
-    //     text-transform: uppercase;
-    //     margin-left: 54px;
-    //   }
-    //   .note-msg {
-    //     display: inline-block;
-    //     width: 58.3333333333%;
-    //     padding: 0 20px;
-    //     vertical-align: middle;
-    //     font-weight: 300;
-    //     text-align: center;
-    //     font-size: 16;
-    //   }
-    // }
   }
 }
 </style>
