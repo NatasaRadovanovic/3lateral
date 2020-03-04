@@ -44,5 +44,9 @@
 .page-wrapper-dark {
     background-color:#010101;
     color: #fff;
-    height: 100vh;
+    // height: 100vh;
+    padding: 30px;
+    .map-section {
+      width: 35%;
+    }
 }

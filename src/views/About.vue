@@ -21,7 +21,16 @@
         Novosadskog sajma 2/VII floor<br />
         21000 Novi Sad, Serbia
       </p>
-      <div class="map-section"></div>
+      <div class="map-section">
+        <iframe
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC6k5P0aESD1pbMzL32Nmeggn9MfkqXxwA&q=NovosadskogSajma2NoviSad,Srbija"
+          width="100%"
+          height="300"
+          frameborder="0"
+          style="border:0"
+        >
+        </iframe>
+      </div>
     </div>
   </div>
 </template>
