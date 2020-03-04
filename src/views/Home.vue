@@ -24,17 +24,46 @@
         </div>
       </div>
     </div>
+    <div class="services-page">
+      <Services />
+    </div>
+    <div class="project-home">
+      <div class="project-text">
+        <p>
+          Throught 15 years we've worked on more than 200 projects in
+          categories:
+        </p>
+      </div>
+      <div class="links-wrapp">
+        <router-link class="project-link" to="/">vr</router-link>
+        <router-link class="project-link" to="/">3D scanning</router-link>
+        <router-link class="project-link" to="/">characters</router-link>
+        <router-link class="project-link" to="/">concept</router-link>
+        <router-link class="project-link" to="/">creature</router-link>
+        <router-link class="project-link" to="/">face</router-link>
+        <router-link class="project-link" to="/">film</router-link>
+        <router-link class="project-link" to="/">games</router-link>
+        <router-link class="project-link" to="/">motion</router-link>
+      </div>
+      <button>see our projects</button>
+    </div>
+    <div class="about-home">
+      <About />
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
+import About from "@/views/About.vue";
+import Services from "@/views/Services.vue";
 
 export default {
   name: "Home",
   components: {
-    // HelloWorld
+    About,
+    Services
   },
   data() {
     return {
@@ -212,6 +241,69 @@ export default {
           height: 4px;
           background: #de4242;
         }
+      }
+    }
+  }
+  .project-home {
+    width: 100%;
+    text-align: center;
+    background-color: #de4242;
+    padding: 30px 0;
+    color: #fff;
+    font-family: "Oswald", Arial, sans-serif;
+    margin-top: 30px;
+    .project-text p {
+      max-width: 480px;
+      margin: auto auto 40px;
+      text-transform: none;
+      font-weight: 300;
+      font-family: "Oswald", Arial, sans-serif;
+      font-size: 33px;
+      position: relative;
+      &:after {
+        content: "";
+        width: 48px;
+        height: 4px;
+        background-color: #fff;
+        position: absolute;
+        top: calc(100% + 15px);
+        left: 50%;
+      }
+    }
+    .links-wrapp {
+      line-height: inherit;
+      cursor: pointer;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+      // font-weight: 300;
+      .project-link {
+        text-decoration: none;
+        color: #fff;
+        font-weight: normal;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:not(:first-child):before {
+          margin: 0 10px;
+          color: #010101;
+          content: "/";
+        }
+      }
+    }
+    button {
+      border: 4px solid #fff;
+      background-color: transparent;
+      padding: 10px 40px;
+      font-size: 32px;
+      display: inline-block;
+      font-family: "Oswald", Arial, sans-serif;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #e66d6d;
       }
     }
   }

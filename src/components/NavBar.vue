@@ -12,7 +12,7 @@
         </a>
       </div>
       <nav class="header-menu">
-        <router-link class="nav-link" to="/">services</router-link>
+        <router-link class="nav-link" to="/services">services</router-link>
         <router-link class="nav-link" to="/"
           ><span class="link-slash">/</span> projects</router-link
         >
@@ -39,7 +39,9 @@
         <div class="sidebar-mobile" :class="{ sideBarToogle: toggleMenu }">
           <ul>
             <li>
-              <router-link class="nav-link-mobile" to="/">services</router-link>
+              <router-link class="nav-link-mobile" to="/services"
+                >services</router-link
+              >
             </li>
             <li>
               <router-link class="nav-link-mobile" to="/">projects</router-link>

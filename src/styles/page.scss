@@ -6,8 +6,6 @@
   .page-section {
     max-width: 73.125rem;
     margin: 0 auto;
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
     padding-top: 100px;
     .title h1 {
       margin-bottom: 50px;
@@ -17,6 +15,8 @@
       font-family: "Oswald", Arial, sans-serif;
       position: relative;
       display: inline-block;
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
       &:after {
         content: "";
         width: 96px;
@@ -24,7 +24,7 @@
         background-color: #de4242;
         position: absolute;
         top: calc(100% + 15px);
-        left: 0%;
+        left: 0.9375rem;
       }
     }
     p {
