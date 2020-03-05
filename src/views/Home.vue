@@ -47,6 +47,9 @@
       </div>
       <button>see our projects</button>
     </div>
+    <div class="latest-news-home">
+      <LatestNews />
+    </div>
     <div class="about-home">
       <About />
     </div>
@@ -56,14 +59,16 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-import About from "@/views/About.vue";
 import Services from "@/views/Services.vue";
+import LatestNews from "@/views/latestNews.vue";
+import About from "@/views/About.vue";
 
 export default {
   name: "Home",
   components: {
     About,
-    Services
+    Services,
+    LatestNews
   },
   data() {
     return {
@@ -306,6 +311,9 @@ export default {
         background-color: #e66d6d;
       }
     }
+  }
+  .latest-news-home {
+    margin-top: -50px;
   }
 }
 </style>

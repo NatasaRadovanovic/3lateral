@@ -9,7 +9,7 @@
           <div class="item-content">
             <h3 class="title light">charachter concept</h3>
             <div class="item-text">
-              <p class="light">
+              <p class="light auto">
                 3Lateral is currently employed to define visual style and design
                 of 30 primary characters in feature length animation movie. We
                 are able to communicate design through traditional and digital
@@ -176,8 +176,22 @@ export default {
     "item9 item10 item11"
     "item12 item13 item14";
   font-family: "Oswald", Arial, sans-serif;
+  // .item1 {
+  //   position: relative;
+  //   &::before {
+  //     border-color: transparent transparent transparent #de4242;
+  //     border-width: 20px 0 20px 20px;
+  //     left: auto;
+  //     position: absolute;
+  //     right: -20px;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     z-index: 10;
+  //     content: "";
+  //     border-style: solid;
+  //   }
+  // }
 }
-
 .item-content {
   padding: 30px;
   background-color: #de4242;
@@ -226,6 +240,7 @@ export default {
   width: 100%;
   height: 100%;
 }
+// grid area //
 .item1 {
   grid-area: item1;
 }
@@ -269,23 +284,24 @@ export default {
   grid-area: item14;
 }
 // responsive 2 col
-@media (max-width: 1023px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 440px;
-    border: 0.5px solid grey;
-    grid-template-areas:
-      "item1 item2"
-      "item5 item8"
-      "item3 item4"
-      "item6 item7"
-      "item8 item11"
-      "item9 item10"
-      "item13 item14";
-    font-family: "Oswald", Arial, sans-serif;
-  }
-}
+// @media (max-width: 1023px) {
+//   .grid {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-auto-rows: 440px;
+//     max-width: 73.125rem;
+//     margin-left: auto;
+//     margin-right: auto;
+//     grid-template-areas:
+//       "item1 item2"
+//       "item5 item8"
+//       "item3 item4"
+//       "item6 item7"
+//       "item8 item11"
+//       "item9 item10"
+//       "item13 item14";
+//   }
+// }
 // responsive 1 col
 @media (max-width: 820px) {
   .grid {
@@ -311,6 +327,52 @@ export default {
       "item14"
       "item13";
     font-family: "Oswald", Arial, sans-serif;
+    .item1,
+    .item7,
+    .item13 {
+      position: relative;
+      &:before {
+        border-color: transparent transparent #de4242;
+        border-style: solid;
+        border-width: 0 20px 20px;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        z-index: 10;
+        content: "";
+        transform: translateX(-50%);
+      }
+    }
+    .item8,
+    .item9 {
+      position: relative;
+      &:before {
+        border-color: transparent transparent #fff;
+        border-style: solid;
+        border-width: 0 20px 20px;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        z-index: 10;
+        content: "";
+        transform: translateX(-50%);
+      }
+    }
+    .item3,
+    .item11 {
+      position: relative;
+      &:before {
+        border-color: transparent transparent black;
+        border-style: solid;
+        border-width: 0 20px 20px;
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        z-index: 10;
+        content: "";
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 </style>

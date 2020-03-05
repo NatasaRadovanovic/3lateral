@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+@import "./main.scss";
 .page-wrapper {
   width: 100%;
-  font-family: "Open Sans";
+  font-family: $text-font;
   .page-section {
     max-width: 73.125rem;
     margin: 0 auto;
@@ -12,7 +12,7 @@
       text-transform: uppercase;
       font-size: 66px;
       font-weight: normal;
-      font-family: "Oswald", Arial, sans-serif;
+      font-family: $basic-font;
       position: relative;
       display: inline-block;
       padding-left: 0.9375rem;
@@ -21,7 +21,7 @@
         content: "";
         width: 96px;
         height: 8px;
-        background-color: #de4242;
+        background-color: $orange;
         position: absolute;
         top: calc(100% + 15px);
         left: 0.9375rem;
@@ -36,14 +36,14 @@
       margin-bottom: 1.5rem;
     }
     a {
-      color: #de4242;
+      color: $orange;
       text-decoration: none;
     }
   }
 }
 .page-wrapper-dark {
-    background-color:#010101;
-    color: #fff;
+    background-color: $black;
+    color: $white;
     // height: 100vh;
     padding: 30px;
     .map-section {

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+@import "./main.scss";
 * {
     box-sizing: border-box;
 }
@@ -15,13 +16,13 @@
       .header-logo {
         flex: 0 0 50%;
         max-width: 50%;
-        background-color: #010101;
+        background-color: $black;
         transition: flex 0.3s; 
       }
       .header-menu {
         flex: 0 0 50%;
         max-width: 50%;
-        background-color: #de4242;
+        background-color: $orange;
         transition: flex 0.3s;
         display: flex;
         align-items: center;
@@ -29,7 +30,7 @@
         padding-right: 10px;
         position: relative;
           .nav-link {
-              color: #fff;
+              color: $white;
               text-transform: uppercase;
               position: relative;
               line-height: 60px;
@@ -39,7 +40,7 @@
               text-decoration: none;
               
                   .link-slash {
-                      color: #010101;
+                      color: $black;
                       padding-left: 5px;
                       padding-right: 3px;
                   }
@@ -47,10 +48,10 @@
                     display: none;
                 }
                 &.nav-link:hover {
-                    color: #010101;
+                    color: $black;
                 }
                 &.nav-link:active {
-                    color: #010101;
+                    color: $black;
                 }
                 &.nav-link:last-child {
                     color: blue;
@@ -131,17 +132,17 @@
         }
         ul {
             list-style-type: none;
-            background-color: black;
+            background-color: $black;
             padding: 0;
             li > .nav-link-mobile {
                 text-align: right;
                 display: block;
                 min-width: 160px;
                 padding: 0 30px;
-                border-bottom: 1px solid #de4242;
+                border-bottom: 1px solid $orange;
                 position: relative;
-                background-color: #010101;
-                color: #fff;
+                background-color: $black;
+                color: $white;
                 font-size: 16px;
                 line-height: 60px;
                 text-transform: uppercase;
@@ -151,7 +152,7 @@
                     text-align: center;
                 } 
                 &:hover {
-                    color:#de4242 ;
+                    color:$orange ;
                 }
             }
         } 
