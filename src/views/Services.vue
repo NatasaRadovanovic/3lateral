@@ -164,7 +164,7 @@ export default {
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 440px;
+  // grid-auto-rows: 440px;
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;

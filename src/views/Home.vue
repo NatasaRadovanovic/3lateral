@@ -276,12 +276,11 @@ export default {
       }
     }
     .links-wrapp {
-      line-height: inherit;
       cursor: pointer;
       font-size: 20px;
       text-transform: uppercase;
       padding-bottom: 40px;
-      // font-weight: 300;
+      word-wrap: break-word;
       .project-link {
         text-decoration: none;
         color: #fff;

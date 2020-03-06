@@ -43,6 +43,8 @@ export default {
       flex-direction: column;
       height: auto;
       width: 100%;
+      align-content: space-between;
+      align-items: center;
     }
     .col-flex {
       display: flex;
@@ -74,10 +76,10 @@ export default {
       max-width: 33.3333%;
       text-align: center;
       display: inline-block;
-      width: 33.3333333333%;
       padding: 30px 20px;
       @media (max-width: 820px) {
         padding: 17px 20px;
+        max-width: 100%;
       }
       p {
         font-size: 16px;

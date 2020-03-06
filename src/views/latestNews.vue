@@ -336,9 +336,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  @media (max-width: 820px) {
-    display: flex;
-    flex-wrap: nowrap;
+  @media (max-width: 479px) {
     flex-direction: column;
   }
 }
@@ -347,7 +345,7 @@ export default {
   width: 50%;
   margin-bottom: 20px;
   padding: 0 15px;
-  @media (max-width: 820px) {
+  @media (max-width: 479px) {
     width: 100%;
   }
   .title {
@@ -382,8 +380,13 @@ export default {
       @media (max-width: 820px) {
         float: initial;
         display: block;
-        max-width: 100%;
         text-align: center;
+        max-width: 100%;
+      }
+      img {
+        @media (max-width: 820px) {
+          width: 100%;
+        }
       }
     }
     .article-text {
