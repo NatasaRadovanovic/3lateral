@@ -16,7 +16,7 @@
         <router-link class="nav-link" to="/"
           ><span class="link-slash">/</span> projects</router-link
         >
-        <router-link class="nav-link" to="/"
+        <router-link class="nav-link" to="/news"
           ><span class="link-slash">/</span> news</router-link
         >
         <router-link class="nav-link" to="/careers"
@@ -47,7 +47,7 @@
               <router-link class="nav-link-mobile" to="/">projects</router-link>
             </li>
             <li>
-              <router-link class="nav-link-mobile" to="/">news</router-link>
+              <router-link class="nav-link-mobile" to="/news">news</router-link>
             </li>
             <li>
               <router-link class="nav-link-mobile" to="/careers"
