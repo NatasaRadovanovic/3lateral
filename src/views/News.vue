@@ -258,7 +258,7 @@
 import Isotope from "isotope-layout";
 // Vue.use(Isotope);
 export default {
-  name: "LatestNews",
+  name: "News",
   components: {
     // HelloWorld
   },

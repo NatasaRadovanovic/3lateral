@@ -13,7 +13,7 @@
       </div>
       <nav class="header-menu">
         <router-link class="nav-link" to="/services">services</router-link>
-        <router-link class="nav-link" to="/"
+        <router-link class="nav-link" to="/projects"
           ><span class="link-slash">/</span> projects</router-link
         >
         <router-link class="nav-link" to="/news"
@@ -44,7 +44,9 @@
               >
             </li>
             <li>
-              <router-link class="nav-link-mobile" to="/">projects</router-link>
+              <router-link class="nav-link-mobile" to="/projects"
+                >projects</router-link
+              >
             </li>
             <li>
               <router-link class="nav-link-mobile" to="/news">news</router-link>
