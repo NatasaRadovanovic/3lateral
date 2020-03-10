@@ -4,7 +4,7 @@
       <div class="title">
         <h1>Services</h1>
       </div>
-      <div class="grid">
+      <div class="-grid">
         <div class="item1">
           <div class="item-content">
             <h3 class="title light">charachter concept</h3>
@@ -161,7 +161,7 @@ export default {
 <style lang="scss">
 @import "../styles/page.scss";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-.grid {
+.-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   // grid-auto-rows: 440px;
@@ -304,7 +304,7 @@ export default {
 // }
 // responsive 1 col
 @media (max-width: 820px) {
-  .grid {
+  .-grid {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 73.125rem;
