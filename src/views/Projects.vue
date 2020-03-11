@@ -25,7 +25,7 @@
               <a
                 class="project-link"
                 @click="handleFilter($event)"
-                data-filter=".3d"
+                data-filter=".scanning"
                 >3d scanning</a
               >
             </li>
@@ -102,7 +102,7 @@
               </div>
             </div>
           </div>
-          <div class="element-item 3d face motion">
+          <div class="element-item scanning face motion">
             <div class="img-container">
               <img src="../assets/projects/project2.jpg" />
               <div class="project-info">
@@ -116,7 +116,7 @@
             </div>
           </div>
           <div
-            class="element-item 3d character concept creature face film games motion"
+            class="element-item scanning character concept creature face film games motion"
           >
             <div class="img-container">
               <img src="../assets/projects/project1.jpg" />
@@ -304,11 +304,16 @@ export default {
     };
   },
   mounted() {
-    var elem = document.querySelector(".grid");
-    this.$grid = new Isotope(elem, {
-      itemSelector: ".element-item",
-      layoutMode: "fitRows"
-    });
+    setTimeout(() => {
+      var elem = document.querySelector(".grid");
+      this.$grid = new Isotope(elem, {
+        itemSelector: ".element-item",
+        layoutMode: "fitRows",
+        fitRows: {
+          gutter: 0
+        }
+      });
+    }, 100);
   },
   methods: {
     handleFilter(e) {
@@ -344,14 +349,20 @@ export default {
 }
 /* ---- isotope ---- */
 .img-container {
-  position: relative;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    z-index: 1000;
+  }
   img {
     transition: transform 0.2s;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
     &:hover {
       cursor: pointer;
       transform: scale(1.05);
-      z-index: 1000;
     }
   }
   .project-info {

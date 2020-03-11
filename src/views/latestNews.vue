@@ -330,16 +330,8 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../styles/page.scss";
-.article-wrapp {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  @media (max-width: 479px) {
-    flex-direction: column;
-  }
-}
 .article-content {
   //   background: red;
   width: 50%;
@@ -400,6 +392,16 @@ export default {
   }
   a {
     cursor: pointer;
+  }
+}
+</style>
+<style lang="scss">
+.article-wrapp {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (max-width: 479px) {
+    flex-direction: column;
   }
 }
 </style>
