@@ -60,7 +60,7 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 import Services from "@/views/Services.vue";
-import LatestNews from "@/views/latestNews.vue";
+import LatestNews from "@/views/LatestNews.vue";
 import About from "@/views/About.vue";
 
 export default {

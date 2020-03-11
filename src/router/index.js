@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Services from "../views/Services.vue";
 import Careers from "../views/Careers.vue";
 import News from "../views/News.vue";
+import Article from "../views/Article.vue";
 import Projects from "../views/Projects.vue";
 import About from "../views/About.vue";
 
@@ -29,6 +30,11 @@ const routes = [
     path: "/news",
     name: "News",
     component: News
+  },
+  {
+    path: "/news/:id",
+    name: "Article",
+    component: Article
   },
   {
     path: "/projects",

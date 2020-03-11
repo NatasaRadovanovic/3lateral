@@ -164,7 +164,7 @@ export default {
 .-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  // grid-auto-rows: 440px;
+  grid-auto-rows: 440px;
   max-width: 73.125rem;
   margin-left: auto;
   margin-right: auto;
@@ -191,6 +191,22 @@ export default {
   //     border-style: solid;
   //   }
   // }
+  @media (max-width: 1023px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 440px;
+    max-width: 73.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "item1 item2"
+      "item5 item8"
+      "item3 item4"
+      "item6 item7"
+      "item9 item12"
+      "item10 item11"
+      "item13 item14";
+  }
 }
 .item-content {
   padding: 30px;
@@ -233,12 +249,18 @@ export default {
 .position {
   position: relative;
 }
-.item-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.item-img {
+  overflow: hidden;
+  position: relative;
+  height: 440px;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 // grid area //
 .item1 {
@@ -284,30 +306,14 @@ export default {
   grid-area: item14;
 }
 // responsive 2 col
-// @media (max-width: 1023px) {
-//   .grid {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-auto-rows: 440px;
-//     max-width: 73.125rem;
-//     margin-left: auto;
-//     margin-right: auto;
-//     grid-template-areas:
-//       "item1 item2"
-//       "item5 item8"
-//       "item3 item4"
-//       "item6 item7"
-//       "item8 item11"
-//       "item9 item10"
-//       "item13 item14";
-//   }
-// }
+
 // responsive 1 col
 @media (max-width: 820px) {
   .-grid {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 73.125rem;
+    grid-auto-rows: auto;
     margin-left: auto;
     margin-right: auto;
     border: 0.5px solid grey;
@@ -371,6 +377,17 @@ export default {
         z-index: 10;
         content: "";
         transform: translateX(-50%);
+      }
+    }
+    .item-img {
+      position: relative;
+      // height: 100%;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
       }
     }
   }

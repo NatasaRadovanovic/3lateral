@@ -68,7 +68,7 @@
                   </p>
                 </div>
               </div>
-              <router-link to="/">Continue reading</router-link>
+              <router-link to="/news/1">Continue reading</router-link>
             </div>
           </div>
           <div class="element-item press">
@@ -268,17 +268,16 @@ export default {
     };
   },
   mounted() {
-    var elem = document.querySelector(".grid");
-    this.$grid = new Isotope(elem, {
-      // options
-      itemSelector: ".element-item",
-      layoutMode: "fitRows"
-    });
+    setTimeout(() => {
+      var elem = document.querySelector(".grid");
+      this.$grid = new Isotope(elem, {
+        itemSelector: ".element-item",
+        layoutMode: "fitRows"
+      });
+    }, 100);
   },
   methods: {
     handleFilter(e) {
-      //   console.log(e);
-      //   console.log(this.$grid);
       this.$grid.arrange({
         filter: e.target.getAttribute("data-filter")
       });
